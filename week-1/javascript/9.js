@@ -3,3 +3,8 @@
  * @param {number} num The number to check.
  * @throws {Error} If the number is not a positive integer.
  */
+function Positive(num) {
+    if (num < 0) {
+        throw new Error('The provided number is less than 0.');
+    }
+}

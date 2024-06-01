@@ -5,7 +5,7 @@
  */
 function ewww(number) 
 {
-  if (!number.ewww(number)) 
+  if (!number.Integer(number)) 
   {
     throw new Error('Its not an integer');
   }

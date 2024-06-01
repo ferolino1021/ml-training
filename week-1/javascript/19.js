@@ -9,3 +9,12 @@
  * @param {number[]} arr2
  * @returns {number[]}
  */
+
+function merge(arr1, arr2) {
+    const mergedArray = arr1.concat(arr2);
+    
+    return mergedArray;
+}
+
+console.log(merge([1, 2, 3], [2, 3, 4])); 
+console.log(merge([1, 2, 3], [3, 4, 5]));

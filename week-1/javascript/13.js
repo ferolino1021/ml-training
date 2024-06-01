@@ -6,3 +6,15 @@
  * Example string: "The quick brown fox jumps over the lazy dog"
  * Expected output: "The Quick Brown Fox Jumps Over The Lazy Dog"
  */
+function firstLetter(str) {
+    const words = str.split('');
+
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    }
+
+    return words.join(' ');
+}
+
+let input = "The quick brown fox jumps over the lazy dog";
+console.log(firstLetter(input));
