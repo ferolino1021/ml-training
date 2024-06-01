@@ -4,11 +4,17 @@
  * @return {string} The string with HTML entities converted to their corresponding characters.
  */
 
-// ENTITY OBJECT
-const entities = {
-  "&": "&amp;",
-  "<": "&lt;",
-  ">": "&gt;",
-  '"': "&quot;",
-  "'": "&apos;",
-};
+function convertsHtml(str: string): string {
+  // ENTITY OBJECT
+  const entities: { [key: string]: string } = {
+      "&amp;": "&",
+      "&lt;": "<",
+      "&gt;": ">",
+      "&quot;": '"',
+      "&apos;": "'",
+  };
+  return str.replace(/[&<>"']/g, entry => entities[entry]);
+}
+
+const inputs: string = 'This is a & > <  & ';
+console.log(convertsHtml(inputs));

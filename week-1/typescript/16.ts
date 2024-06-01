@@ -15,10 +15,38 @@
  * @return {number} The average marks of the students.
  */
 
-const students = [
+const students: { name: string, mark: number }[] = [
   { name: "John", mark: 90 },
   { name: "Jane", mark: 85 },
   { name: "Joe", mark: 95 },
   { name: "Tom", mark: 65 },
   { name: "Nancy", mark: 75 },
 ];
+
+function computeAverage(): { average: number, grade: string } {
+  let totalMarks: number = 0;
+  for (let student of students) {
+      totalMarks += student.mark;
+  }
+  const average: number = totalMarks / students.length;
+  let grade: string;
+  if (average < 60) {
+      grade = 'F';
+  } 
+  else if (average < 70) {
+      grade = 'D';
+  } 
+  else if (average < 80) {
+      grade = 'C';
+  } 
+  else if (average < 90) {
+      grade = 'B';
+  } 
+  else{
+      grade = 'A';
+  }
+  return { average, grade };
+}
+
+const { average, grade } = computeAverage();
+console.log(`The average marks of the students is ${average}.`);

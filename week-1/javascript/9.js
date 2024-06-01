@@ -8,3 +8,9 @@ function Positive(num) {
         throw new Error('The provided number is less than 0.');
     }
 }
+try {
+    Positive(-5);
+} 
+catch (error) {
+    console.error(error.message);
+}

@@ -7,3 +7,19 @@
  * @param {string} str
  * @returns {string}
  */
+function swapCase(str: string): string {
+    let swap = '';
+
+    for (let char of str) {
+        if (char === char.toUpperCase()) {
+            swap += char.toLowerCase();
+        } else {
+            swap += char.toUpperCase();
+        }
+    }
+
+    return swap;
+}
+
+console.log(swapCase("Hello World"));
+console.log(swapCase("JavaScript"));

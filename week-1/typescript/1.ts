@@ -3,3 +3,8 @@
  * @param {number} num The number to check.
  * @return {boolean} True if the number is even, false if it is odd.
  */
+function even(num: number): boolean {
+    return num % 2 === 0;
+}
+console.log(even(4));
+console.log(even(7));
